@@ -101,7 +101,7 @@ public class TinyDB {
         this.DEFAULT_APP_IMAGEDATA_DIRECTORY = theFolder;
         String mFullPath = setupFullPath(theImageName);
 
-        if (!mFullPath.equals("")) {
+        if (!"".equals(mFullPath)) {
             lastImagePath = mFullPath;
             saveBitmap(mFullPath, theBitmap);
         }
@@ -310,7 +310,7 @@ public class TinyDB {
         ArrayList<Boolean> newList = new ArrayList<Boolean>();
 
         for (String item : myList) {
-            if (item.equals("true")) {
+            if ("true".equals(item)) {
                 newList.add(true);
             } else {
                 newList.add(false);
